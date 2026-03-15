@@ -13,7 +13,7 @@ class HolaMundo {
     //aqui se definene las variables globales
 
     public static void main(String []args){
-        System.out.println("Hopla mundo mundial");
+        System.out.println("Hola mundo mundial");
     }
 
 }
