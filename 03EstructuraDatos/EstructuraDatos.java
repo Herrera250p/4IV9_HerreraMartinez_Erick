@@ -272,7 +272,13 @@ class EstructuraDatos {
 
                         if(n1 >= 1 && n1 <=20){
                             //seimprime
+                            for(int i = 1; i <= n1; i++){
+                                //recorro las columnas
+                                for(int j = 1; j <= n1; j++){
 
+
+                                }
+                            }
                         }else{
                             System.out.println("Por favor solo ingrese valores emntre uno y el 20");
                         }
