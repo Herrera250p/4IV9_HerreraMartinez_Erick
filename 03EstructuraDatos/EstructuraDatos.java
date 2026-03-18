@@ -93,7 +93,7 @@ class EstructuraDatos {
                 }
                 System.out.println("El numero convertido a binario ");
 
-                   break;
+                break;
                 case 3:
                     System.out.println("Convercion de temperaturas");
                     System.out.println("Ingrese la temoperatura en celsius");
@@ -122,8 +122,8 @@ class EstructuraDatos {
                     int canum;
                     canum = entrada.nextInt();
 
-                    int positivo;
-                    int negativo;
+                    int positivo = 0;
+                    int negativo = 0;
 
                         for(int i = 1; i <= canum; i++){
                             System.out.println("Ingrese un numero ");
@@ -154,7 +154,7 @@ class EstructuraDatos {
                             System.out.println("ingrese el precio");
                             float precio = entrada.nextFloat();
                             System.out.println("Ingrese la cantidad del producto");
-                            int cantidad = entrada.nexInt();
+                            int cantidad = entrada.nextInt();
                             float resultado = cantidad * precio;
 
                             compra = compra + resultado;
@@ -243,24 +243,38 @@ class EstructuraDatos {
                                 float perimetrop;
 
                                 perimetrop = ladopen * 5;
-                                areap = (perimetrop + apotema) / 2;
+                                areap = (perimetrop + apo) / 2;
                                 System.out.println("Area" + areap);
                                 System.out.println("Perimetro" + perimetrop);
                                 break; 
 
                         }
                         break;
+
+                    case 7:
+
+                    //quiero duna tabla de multiplicar
+                    //deberan darle formato
+
+                    for(int n = 1; n <= 10; n++){
+                        System.out.println(n + " | " + (n * 10 + " | " + (n * 100) + " | " + (n * 1000)));
+                    }
+                        break;
+
+                    case 8:
+                        break;
+
+                    case 9:
+                        break;
+
                         default:
                             break;
 
                     
 
                 }
-
-           
         System.out.println("Deseeas repetir el programa escribe s o S para si");
             letrapararepetir = entrada.next().charAt(0);
-       
         }while (letrapararepetir == 's' || letrapararepetir == 'S');
 
         
