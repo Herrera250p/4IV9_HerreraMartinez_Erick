@@ -254,7 +254,7 @@ class EstructuraDatos {
                     case 7:
 
                     //quiero duna tabla de multiplicar
-                    //deberan darle formato
+                    //deberan darle formato titulos
 
                     for(int n = 1; n <= 10; n++){
                         System.out.println(n + " | " + (n * 10 + " | " + (n * 100) + " | " + (n * 1000)));
@@ -265,6 +265,17 @@ class EstructuraDatos {
                         break;
 
                     case 9:
+                        System.out.println("Vamos a realizar un dibujo de un cuadrado magico");
+                        System.out.println("Ingrese el tamaño del cuadrado");
+
+                        int n1 = entrada.nextInt();
+
+                        if(n1 >= 1 && n1 <=20){
+                            //seimprime
+
+                        }else{
+                            System.out.println("Por favor solo ingrese valores emntre uno y el 20");
+                        }
                         break;
 
                         default:
