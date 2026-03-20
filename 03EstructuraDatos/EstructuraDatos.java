@@ -15,7 +15,6 @@ vamos a crear 14 pogramas dentro de un menu gigante para poner a prueba sus cono
 13.- Desarrrollar una calculadora basica+-*/
 
 import java.util.Scanner;
-import jdk.jshell.spi.ExecutionControl;
 
 class EstructuraDatos {
     
@@ -345,11 +344,9 @@ class EstructuraDatos {
 
                                 case 13:
                                     System.out.println("Calculadora basiquisima");
-
                                     System.out.println("Ingrese su primer numero");
                                     float resul = entrada.nextFloat();
-
-                                    char continua;
+                                    char continuar;
 
                                     do{
                                         System.out.println("Ingrese la operacion deseada");
@@ -369,11 +366,12 @@ class EstructuraDatos {
                                         }else if (operacion == '/') {
                                             resul = resul + num;
                                         }else{
-                                            System.out.println("¿Deseas continuar con la calculadora? (s)(n)");
-                                            continua = entrada.next().charAt(0);
+                                            System.out.println("Opercion no valida");
                                         }
+                                            System.out.println("¿Deseas continuar con la calculadora? (s)(n)");
+                                            continuar = entrada.next().charAt(0);
 
-                                    }while (continua == 's' || continua == 'S');
+                                    }while (continuar == 's' || continuar == 'S');
 
                                     System.out.println("Resultado final" + resul);
                                     break;
