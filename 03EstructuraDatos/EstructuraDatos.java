@@ -15,6 +15,7 @@ vamos a crear 14 pogramas dentro de un menu gigante para poner a prueba sus cono
 13.- Desarrrollar una calculadora basica+-*/
 
 import java.util.Scanner;
+import jdk.jshell.spi.ExecutionControl;
 
 class EstructuraDatos {
     
@@ -262,8 +263,17 @@ class EstructuraDatos {
                         break;
 
                     case 8:
-                        break;
+                        System.out.println("Ingrese un numero ");
 
+
+                        int numerofactorial = entrada.nextInt();
+                        int fact = 1;
+
+                        for (int i = 1; i <= numerofactorial; i++){
+                            fact = fact * i;
+                        }
+                        System.out.println("El factorial es:" + fact);
+                        break;
                     case 9:
                         System.out.println("Vamos a realizar un dibujo de un cuadrado magico");
                         System.out.println("Ingrese el tamaño del cuadrado");
@@ -283,7 +293,90 @@ class EstructuraDatos {
                             System.out.println("Por favor solo ingrese valores emntre uno y el 20");
                         }
                         break;
+                        case 10:
+                            System.out.println("Ingrese el tamaño del dibujo kawaii");
 
+
+                            int tama = entrada.nextInt();
+
+                            if(tama >= 1 && tama <= 20){
+                                for(int i = 1; i <= tama; i++){
+                                    for(int j = 1; j <= tama; j++){
+                                        if (i == 1 || i == tama || j == 1 || j == tama) {
+                                            System.out.print("*");
+                                        }else{
+                                            System.out.print(" ");
+                                        }
+                                    }
+                                    System.out.println();
+                                }
+                            }
+                            break;
+                            case 11:
+                                System.out.println("NO intente otro numero");
+                                break;
+                            case 12:
+                                System.out.println("Ingrese el tamaño del diamante");
+
+                                int diamon = entrada.nextInt();
+
+                                for(int i = 1; i <= diamon; i++){
+                                    for(int j = 1; j <= diamon - i; j++){
+                                        System.out.print(" ");
+
+                                    }
+                                for(int j = 1; j <= (2*i - 1); j++){
+                                System.out.print("*");
+
+                                }
+                                    System.out.println();
+                                }
+
+                                for(int i = diamon - 1; i >=1; i--){
+                                    for(int j = 1; j <= diamon -i; j++){
+                                        System.out.print("*");
+                                    }
+                                    for(int j = 1; j <= (2*i - 1); j++){
+                                        System.out.print("*");
+                                    }
+                                    System.out.println();
+                                }
+                                break;
+
+                                case 13:
+                                    System.out.println("Calculadora basiquisima");
+
+                                    System.out.println("Ingrese su primer numero");
+                                    float resul = entrada.nextFloat();
+
+                                    char continua;
+
+                                    do{
+                                        System.out.println("Ingrese la operacion deseada");
+
+                                        char operacion = entrada.next().charAt(0);
+
+                                        System.out.println("ingrese numero");
+                                        float num = entrada.nextFloat();
+
+
+                                        if (operacion == '+'){
+                                            resul = resul + num;
+                                        }else if (operacion == '-'){
+                                            resul = resul + num;
+                                        }else if (operacion == '*') {
+                                            resul = resul + num;
+                                        }else if (operacion == '/') {
+                                            resul = resul + num;
+                                        }else{
+                                            System.out.println("¿Deseas continuar con la calculadora? (s)(n)");
+                                            continua = entrada.next().charAt(0);
+                                        }
+
+                                    }while (continua == 's' || continua == 'S');
+
+                                    System.out.println("Resultado final" + resul);
+                                    break;
                         default:
                             break;
 
